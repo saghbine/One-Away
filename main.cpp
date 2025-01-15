@@ -1,9 +1,9 @@
 //
 //  main.cpp
-//  One Away
+//  CTCI 1.5 One Away
 //
 //  Created by daniel saghbine on 12/17/24.
-//  CTCI 1.5 One Away
+//
 
 #include <iostream>
 #include <cstdlib>
@@ -13,25 +13,24 @@ bool One_Away(const string &s1, const string &s2);
 
 int main()
 {
-    string str1, str2;
-    
     cout<<"problem\n-------\n\tThere are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.\n\n";
     
     cout<<"input\n-----\n\tType: ";
+    string str1, str2;
     cin>>str1;
     cout<<"\tType again: ";
     cin>>str2;
     
-    cout<<"\noutput\n------\n\tThe strings are"<<(One_Away(str1, str2) ? "" : "n't")<<" none or one edit away.\n\n";
+    cout<<"\noutput\n------\n\t\""<<str1<<"\" and \""<<str2<<"\" are"<<(One_Away(str1, str2) ? "" : "n't")<<" none or one edit away.\n\n";
     
     cout<<"solution\n--------\n\tAuxiliary space complexity: O(1); time complexity: O(n).\n\n";
     
     return 0;
 }
 
-bool One_Away(const string &s1, const string &s2) // s1 and s2 are both input strings
+bool One_Away(const string &s1, const string &s2) // s1 and s2 are input strings
 {
-    if(abs(int(s1.size())-int(s2.size())) > 1) // if s1 and s2 are more than one character off from each other
+    if(abs(int(s1.size())-int(s2.size())) > 1) // if s1 and s2 are more than one char off from each other
         return false; // they aren't none or one edit away
     
     int counter=0; // mistake counter mechanism
