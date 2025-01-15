@@ -45,7 +45,7 @@ bool One_Away(const string &s1, const string &s2) // s1 and s2 are input strings
             {
                 if(s1.size() > s2.size()) // if s1 is bigger than s2
                     i1++; // move i1 to next index in s1
-                else // if s2 is bigger than s1
+                else // else s2 is bigger than s1
                     i2++; // move i2 to next index in s2
                 
                 if(s1[i1] != s2[i2]) // if select char in s1 isn't equivalent to select char in s2
